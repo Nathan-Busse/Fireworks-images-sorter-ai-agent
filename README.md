@@ -338,6 +338,9 @@ This modular design allows you to expand the functionality further (e.g., better
 - **Customizable Logic:** Easily extend or modify the sorting algorithm to suit specific needs.
 - **Cross-Platform:** Developed in Python and compatible with major operating systems.
 
+## Project tree structure:
+[repo_tree](repo_tree.md)
+
 ## Installation
 
 ### Prerequisites
@@ -353,7 +356,7 @@ Open your terminal and run:
 
 ```bash
 git clone https://github.com/Nathan-Busse/Fireworks-images-sorter-ai-agent.git
-cd Fireworks-images-sorter
+cd Fireworks-images-sorter-ai-agent
 ```
 
 ### Installing Dependencies
@@ -427,7 +430,7 @@ For any major changes, please open an issue first to discuss your ideas.
 
 ## License
 
-This project is licensed under the MIT License. Please see the [LICENSE](LICENSE) file for full details.
+This project is licensed under the MIT License. Please see the [LICENSE](LICENSE.md) file for full details.
 
 ## Acknowledgements
 
