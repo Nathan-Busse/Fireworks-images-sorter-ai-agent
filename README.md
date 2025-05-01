@@ -1,4 +1,4 @@
-## _Are you tired of going through tons of images of Fireworks you took on new year’s eve just to find the good ones. I created this AI to solve this problem_
+_Are you tired of going through tons of images of Fireworks you took on new year’s eve just to find the good ones. I created this AI to solve this problem_
 
 ---
 # Fireworks Images Sorter
