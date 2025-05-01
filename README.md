@@ -3,6 +3,7 @@
 
 The **Fireworks Images Sorter** is a Python-based utility designed to help you efficiently organize your fireworks images. Using a dedicated sorting algorithm and a user-friendly graphical interface, this tool allows users to automatically categorize images into designated folders. Whether you're a photography enthusiast or handling a large database of images, this project streamlines the process of managing your media.
 
+![demo.mp4]()
 
 
 ## Table of Contents
