@@ -30,7 +30,8 @@ The **Fireworks Images Sorter** is a Python-based utility designed to help you e
 
 The Fireworks Images Sorter is built to automate the categorization of your fireworks photos. It decouples the core sorting logic from the user interface, making it both a robust backend tool and an engaging application for end users. In this version, a simple yet effective GUI is implemented using Tkinter, allowing users to select source and target directories, preview images, and execute the sorting process with a click of a button.
 
-Below is a detailed breakdown of the provided code in Markdown format:
+## Project tree structure:
+[repo_tree](docs/repo_tree.md)
 
 ---
 
@@ -336,11 +337,7 @@ This modular design allows you to expand the functionality further (e.g., better
 - **Graphical User Interface:** User-friendly GUI built with Tkinter for effortless navigation.
 - **Image Preview:** Displays file names of images found in the source directory.
 - **Customizable Logic:** Easily extend or modify the sorting algorithm to suit specific needs.
-- **Cross-Platform:** Developed in Python and compatible with major operating systems.
-
-## Project tree structure:
-[repo_tree](repo_tree.md)
-
+- **Cross-Platform:** Developed in Python and compatible with major operating 
 ## Installation
 
 ### Prerequisites
