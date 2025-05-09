@@ -36,7 +36,7 @@ jobs:
 
       # Step 2: Set up Snyk CLI
       - name: Set up Snyk CLI to check for security issues
-        uses: snyk/actions/setup@v2
+        uses: snyk/actions/setup@v4
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
