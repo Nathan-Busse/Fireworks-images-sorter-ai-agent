@@ -1,1 +1,109 @@
-
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Snyk Code",
+          "informationUri": "https://snyk.io",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "SNYK-CODE-PY-001",
+              "shortDescription": {
+                "text": "Unsafe SQL Query Construction in Python"
+              },
+              "fullDescription": {
+                "text": "This rule detects the use of unparameterized SQL query construction in Python, where user input may be concatenated or formatted directly into SQL queries. This can lead to SQL injection vulnerabilities."
+              },
+              "help": {
+                "text": "Use parameterized queries or an ORM (e.g., SQLAlchemy) to safeguard your application against SQL injection.",
+                "markdown": "Refer to [SQL Injection Prevention in Python](https://realpython.com/prevent-python-sql-injection/) for best practices."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "category": "Security",
+                "precision": "high"
+              }
+            },
+            {
+              "id": "SNYK-CODE-PY-002",
+              "shortDescription": {
+                "text": "Usage of eval() Function"
+              },
+              "fullDescription": {
+                "text": "Using eval() on untrusted input can lead to arbitrary code execution. This rule identifies instances in Python code where eval() is used without adequate safety checks."
+              },
+              "help": {
+                "text": "Avoid using eval() on untrusted input. Consider safer alternatives like ast.literal_eval() if applicable.",
+                "markdown": "Check the [Python eval() documentation](https://docs.python.org/3/library/functions.html#eval) and security guidelines to understand the risks."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "category": "Security",
+                "precision": "medium"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "SNYK-CODE-PY-001",
+          "level": "error",
+          "message": {
+            "text": "Potential SQL injection risk detected: concatenating unsanitized input into a SQL query. Use parameterized queries instead."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/database.py"
+                },
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 10,
+                  "endLine": 15,
+                  "endColumn": 60
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "py_injection_hash_001"
+          }
+        },
+        {
+          "ruleId": "SNYK-CODE-PY-002",
+          "level": "warning",
+          "message": {
+            "text": "Usage of eval() detected. This use of eval() can lead to severe security risks if the evaluated content is untrusted."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/utils.py"
+                },
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 5,
+                  "endLine": 23,
+                  "endColumn": 20
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "py_eval_hash_002"
+          }
+        }
+      ]
+    }
+  ]
+}
